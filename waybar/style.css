@@ -1,0 +1,93 @@
+* {
+    border: none;
+    border-radius: 10px;
+    font-family: Source Code Pro, monospace;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+window#waybar {
+    background: rgba(21, 18, 27, 0);
+    color: #cdd6f4;
+}
+
+tooltip {
+    background: #1e1e2e;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #11111b;
+}
+
+#workspaces button {
+    color: pink;
+    margin-right: 8px;
+}
+
+#workspaces button.active {
+    color: red;
+}
+
+#custom-wallpaper,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#workspaces,
+#tray,
+#backlight {
+    background: #1e1e2e;
+    padding: 0 10px;
+    margin-top: 5px;
+}
+
+#tray {
+}
+
+#workspaces {
+    background: #1e1e2e;
+    margin-left: 10px;
+}
+
+#custom-wallpaper {
+    margin-left:3px;
+    margin-right:3px;
+    color: #f5c2e7;
+}
+
+#window {
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#clock {
+    margin-left:3px;
+    color: #fab387;
+}
+
+
+#pulseaudio {
+    margin-left:3px;
+    color: #89b4fa;
+    margin-right: 3px;
+}
+
+#pulseaudio.microphone {
+    margin-left:3px;
+	margin-right:3px;
+    color: #cba6f7;
+}
+
+#battery {
+    margin-left:3px;
+    color: #a6e3a1;
+}
+#network {
+	margin-left:3px;
+	color: lightgreen;
+}
+#network.disconnected {
+	margin-right:3px;	
+    color:red;
+}

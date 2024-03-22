@@ -1,0 +1,114 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passtrough": false,
+    "gtk-layer-shell": true,
+    "height": 0,
+    "modules-left": [
+        "hyprland/workspaces"	
+    ],
+    "modules-center": ["hyprland/window"],
+    "modules-right": [	
+        "tray",
+		"network",
+        "custom/wallpaper",
+		"backlight",
+		"battery",
+        "pulseaudio",
+        ],
+
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": " ",
+            "2": " ",
+            "3": " ",
+			"4": " ",
+            "5": " ",
+            "6": " ",
+            "7": " ",
+            "8": " ",
+            "9": " ",
+            "urgent": " ",
+            "active": " ",
+            "default": " "
+          }
+    },
+
+    "clock": {
+        "format": "{: %R   %d/%m}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "tooltip": false,
+        "spacing": 10
+    },
+
+    "custom/wallpaper": {
+		"on-click": "~/.config/waybar/main.sh",
+        "format": " "
+    },
+
+    "backlight": {
+	    "tooltip-format": "屏幕亮度: {percent}%",
+        "device": "intel_backlight",
+        "format": "{icon} {percent}",
+        "format-icons": [""]
+    },
+
+	"battery": {
+    "interval": 60,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon}  {capacity}",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25,
+    "tooltip-format": "剩余电量: {capacity}% , 当前功率：{power}",
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}",
+        "tooltip": false,
+        "format-muted": " Muted",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "scroll-step": 5,
+        "format-icons": {
+            "default": ["", "", ""]
+        }
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "tooltip": false,
+        "format-source": " {volume}",
+        "format-source-muted": " Muted",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    },
+	"network": {
+    "interface": "wlp1s0",
+    "format": " ",
+    "format-wifi": " ",
+    "format-ethernet": " ",
+    "format-disconnected": " ", 
+	"tooltip-format": "{ifname} via {gwaddr} ",
+    "tooltip-format-wifi": "   连接到WIFI：{essid} 信号强度：{signalStrength}%",
+    "tooltip-format-ethernet": "   连接到有线网络：{ifname} ",
+    "tooltip-format-disconnected": "网络未连接",
+    "max-length": 50
+    },
+}

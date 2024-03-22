@@ -1,0 +1,8 @@
+[window]
+opacity =0
+[font]
+size=24
+normal = { family="Source Code Pro"}
+bold={ family="Source Code Pro", style="bold" }
+[colors]
+primary = { foreground="#000000", background="#ffffff" }		
